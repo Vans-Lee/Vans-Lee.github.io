@@ -18,24 +18,28 @@
   <meta name="author" content="Ruyi Chen">
   <meta name="keywords" content="">
   
-    <meta name="description" content="前言  &emsp;&emsp;先来聊聊为什么要搞这个Repository吧，我个人从小就是个电视迷，至于说迷到什么程度呢，现在还能记得所有央视+卫视的台号以及顺序。央视里面最喜欢看的节目是CCTV10的我爱发明和百家讲坛，至于说卫视，大家应该都记得浙江卫视在周一到周五白天播喜羊羊与灰太狼吧（当然是老版的，新版改画风后再没看过，不过近期b站上线了正版的喜灰，画质还精进到了1080P）。此外，最喜欢">
+    <meta name="description" content="前言  &emsp;&emsp;最近需要用Zemax分析一个6片式的镜头组的总体透射率，由于原始数据是使用CodeV建模并且Surface Type为Odd Polynomial类型，利用Zemax自带的Converter宏无法将此面型转化（只可识别有限的面型），为避免重复输入多组数据，只好使用ZPL Macros来解决此问题。 Chapter 1 ZPL Macros Group&emsp;&amp;e">
 <meta property="og:type" content="article">
-<meta property="og:title" content="TVBox神器——让你在电视端获得极致的享受">
-<meta property="og:url" content="https://blog.alist-ruyi.top/2024/06/TVBox/index.html">
+<meta property="og:title" content="ZPL-Tutorial">
+<meta property="og:url" content="https://blog.alist-ruyi.top/2024/06/ZPL-Tutorial/index.html">
 <meta property="og:site_name" content="Ruyi&#39;s Blog">
-<meta property="og:description" content="前言  &emsp;&emsp;先来聊聊为什么要搞这个Repository吧，我个人从小就是个电视迷，至于说迷到什么程度呢，现在还能记得所有央视+卫视的台号以及顺序。央视里面最喜欢看的节目是CCTV10的我爱发明和百家讲坛，至于说卫视，大家应该都记得浙江卫视在周一到周五白天播喜羊羊与灰太狼吧（当然是老版的，新版改画风后再没看过，不过近期b站上线了正版的喜灰，画质还精进到了1080P）。此外，最喜欢">
+<meta property="og:description" content="前言  &emsp;&emsp;最近需要用Zemax分析一个6片式的镜头组的总体透射率，由于原始数据是使用CodeV建模并且Surface Type为Odd Polynomial类型，利用Zemax自带的Converter宏无法将此面型转化（只可识别有限的面型），为避免重复输入多组数据，只好使用ZPL Macros来解决此问题。 Chapter 1 ZPL Macros Group&emsp;&amp;e">
 <meta property="og:locale" content="en_US">
-<meta property="og:image" content="https://blog.alist-ruyi.top/2024/06/TVBox/image-20240608171732122.png">
-<meta property="og:image" content="https://blog.alist-ruyi.top/2024/06/TVBox/image-20240605213924271-1718285782769-2.png">
-<meta property="article:published_time" content="2024-06-13T13:39:20.000Z">
-<meta property="article:modified_time" content="2024-06-13T13:39:20.673Z">
+<meta property="og:image" content="https://blog.alist-ruyi.top/2024/06/ZPL-Tutorial/image-20240619151646592.png">
+<meta property="og:image" content="https://blog.alist-ruyi.top/2024/06/ZPL-Tutorial/image-20240619152417591.png">
+<meta property="og:image" content="https://blog.alist-ruyi.top/2024/06/ZPL-Tutorial/image-20240619153027016.png">
+<meta property="og:image" content="https://blog.alist-ruyi.top/2024/06/ZPL-Tutorial/image-20240619153208794.png">
+<meta property="og:image" content="https://blog.alist-ruyi.top/2024/06/ZPL-Tutorial/image-20240619153333760.png">
+<meta property="article:published_time" content="2024-06-19T08:28:28.000Z">
+<meta property="article:modified_time" content="2024-06-19T08:28:28.346Z">
 <meta property="article:author" content="Ruyi Chen">
+<meta property="article:tag" content="Zemax">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:image" content="https://blog.alist-ruyi.top/2024/06/TVBox/image-20240608171732122.png">
+<meta name="twitter:image" content="https://blog.alist-ruyi.top/2024/06/ZPL-Tutorial/image-20240619151646592.png">
   
   
   
-  <title>TVBox神器——让你在电视端获得极致的享受 - Ruyi&#39;s Blog</title>
+  <title>ZPL-Tutorial - Ruyi&#39;s Blog</title>
 
   <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
 
@@ -205,7 +209,7 @@
       <div class="banner-text text-center fade-in-up">
         <div class="h2">
           
-            <span id="subtitle" data-typed-text="TVBox神器——让你在电视端获得极致的享受"></span>
+            <span id="subtitle" data-typed-text="ZPL-Tutorial"></span>
           
         </div>
 
@@ -216,8 +220,8 @@
     
       <span class="post-meta">
         <i class="iconfont icon-date-fill" aria-hidden="true"></i>
-        <time datetime="2024-06-13 21:39" pubdate>
-          06/13/2024 21:39
+        <time datetime="2024-06-19 16:28" pubdate>
+          06/19/2024 16:28
         </time>
       </span>
     
@@ -228,7 +232,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          3.1k words
+          393 words
         
       </span>
     
@@ -239,7 +243,7 @@
         
         
         
-          26 mins
+          4 mins
         
       </span>
     
@@ -289,12 +293,12 @@
       <div class="container nopadding-x-md" id="board-ctn">
         <div id="board">
           <article class="post-content mx-auto">
-            <h1 id="seo-header">TVBox神器——让你在电视端获得极致的享受</h1>
+            <h1 id="seo-header">ZPL-Tutorial</h1>
             
               <p id="updated-time" class="note note-info" style="display: none">
                 
                   
-                    Last updated on 2024-06-13T21:39:20+08:00
+                    Last updated on 2024-06-19T16:28:28+08:00
                   
                   
 
@@ -306,49 +310,89 @@
                 
                 <h1 align="center">前言</h1>
 
-<p>&emsp;&emsp;先来聊聊为什么要搞这个<a target="_blank" rel="noopener" href="https://github.com/Vans-Lee/TVBox">Repository</a>吧，我个人从小就是个电视迷，至于说迷到什么程度呢，现在还能记得所有央视+卫视的台号以及顺序。央视里面最喜欢看的节目是CCTV10的我爱发明和百家讲坛，至于说卫视，大家应该都记得浙江卫视在周一到周五白天播喜羊羊与灰太狼吧（当然是老版的，新版改画风后再没看过，不过近期b站上线了正版的喜灰，画质还精进到了1080P）。此外，最喜欢看的当然是卡酷卫视，金鹰卡通，动漫秀场，再加上央视的少儿频道，不得不说当年的国漫质量是很高的，洛洛历险记，猪猪侠，超兽武装，果宝特攻……</p>
-<p>&emsp;&emsp;然而时过境迁，沧海桑田，现阶段的人们普遍被各种带货直播、短视频所冲击，又有多少人能够静下心来坐在电视机前看那些曾经最喜欢的节目呢？其实造成这种情况也包括如今智能电视和视频商的“套娃”式收费，就连追个剧都要在“爱优腾”平台之间辗转奔波，甚至手机电脑端的会员和电视端的会员竟然不通用，还要开通那所谓的超级会员才能在电视端观影，而及时你开过了会员，还要去“享受”会员专属广告和暂停广告，这波吃相属实是过于难看了。</p>
-<p>&emsp;&emsp;从21年开始，我也终于忍受不了联通运营商赠送的网络机顶盒带来的垃圾画质，索性将电视和电视盒子都更换了（当时没想到现在的电视也能装app，其实那个电视盒子没有买的必要）。尽管如此，因为我是在拼多多上购买的”破解版”盒子，说白了就是里面安装了一些破解的app罢了，记得看电视直播用的是一个叫火星直播的app，然后电影电视剧动漫等等是用一个叫361影视的东西。毕竟当时还是小白，这些东西已经算是够用了，不过大部分时间是不能榨干电视的性能，即4k画质。</p>
-<p>&emsp;&emsp;真正的转折出现在23年7月，随着拼多多商家的跑路，他们不再维护那个叫做361影视的app后，我只能在网上冲浪，寻求解决之法，终于让我发现了<a target="_blank" rel="noopener" href="https://github.com/CatVodTVOfficial/TVBoxOSC">TVBox</a>这款神器，当时的我简直是两眼放光，仿佛是发现了新大陆一般。其实这款软件只是一个单仓版的空壳，里面没有任何的资源和内容，需要你填入大佬的在线包或本地包才能使用。现在我也看到好多不良商家利用网上开源免费的线路集成到TVBox之后，换个皮，就敢在网上招摇撞骗，用别人的劳动成果来赚取利润真是无耻至极！当时由于本人的能力有限，连本地包都没有搞明白怎么装到电视上，只用了云星大佬的在线包，不过这种线路的性质都属于砸大厂生意的存在，也会挡住某些单位的财路，被攻击也必然是常规操作，总的来说使用体验不是很好。遗憾的是，我还没来得及研究本地包的使用方法，就接到了某校的夏令营通知（当时主要在准备推免的事情），匆匆离开家里了。</p>
-<p>&emsp;&emsp;然后时间来到23年11月，广电总局封杀了电视家——一款可以享受上千个电视直播的app，致使我之前充值过的火星直播永久会员也不复存在了（都是使用电视家的直播源）。而且所有类似的软件都已经属于被严重盯防的对象，甚至在好多的q群里面也禁止讨论直播的话题，真的是一片肃杀之气。不过仅仅这样怎么会难住懂点技术的我呢（嘚瑟一下），我发现网上好多大佬扒下来一些运营商的IPTV直播源，当然这里也涉及到好多专业的知识，权衡利弊之后，我选择了自己手搓一个ipv6的直播源m3u文件，至于说台号顺序呢，当然要和小时候有线电视的顺序一样，不然怎么会有当初的感觉呢哈哈哈，使用方法见<a href="#live-sources-for-ipv6">Live Sources for IPV6</a>。</p>
-<p>&emsp;&emsp;在写好直播源后，我的精力又放到了TVBox本地包上，这时候我在q群的各位大佬帮助下已经能够利用甲壳虫ADB将本地包上传到电视上了，并且也熟练掌握了影视仓、可视TV两款当下最流行的魔改多仓版TVBox。这里先来解释几个概念：单仓，多仓，本地包和在线包。首先单仓是一个仓库下有多条线路，而原版的TVBox只支持单仓，对应来说多仓就是代表多个仓库，每个仓库下有着多条线路。而所谓的在线包一般可以是一个仓库，本地包呢可以用其中的单仓，也可以灵活的将在线包构成的仓库集成进去。当然，如果你从来没听说过这些东西可能也不知道我在讲什么，不过没有关系，你就当听个故事。</p>
-<p>&emsp;&emsp;还有另外一件重要的事情就是我本人是百度网盘的重度用户，现在会员已经冲到了2029年，这个东西在电视上也有一款app，不过当观看50G以上的原盘电影文件变开始限速了，我最开始以为是网络的问题，后来一测感觉不对劲，于是又开始寻求解决方法了。终于让我发现了一款Alist的神器，支持好多网盘的Webdav挂载，并且会员是不限速的，如果将我的百度网盘挂载上，在用电视端的最强播放神器Kodi进行Webdav挂载Alist不就可以看我网盘里的原盘电影了吗。最让我惊喜的是，网上有个小雅大佬制作了一个阿里云盘的超集网站，也可以挂载到自己搭建的Alist上。但是吧，这个Alist如果安装到Windows上，需要让电脑保持开机状态才能使得电视端能实现Webdav挂载Alist，这显然不现实。而Alist最强大的一点在于能够安装到Linux服务器上，这里你可能会将Nas脱口而出。</p>
-<p>&emsp;&emsp;其实就我个人而言，我已经拥有了超大空间的网盘，对于本地空间并没有过大的需求。况且由于大家对于小雅网站的挂载需求过高，大佬也不得不关闭了其他人挂载网站的权限，这时候我如果想要观看小雅网站上的内容，需要自己建立docker容器来搭建。同样的，用Windows来运行docker容器也不是最好的方案。这时呢，我最大的需求就是一台Linux服务器，来跑我的Alist和小雅Docker，并且我还有想要实现家庭范围内全局科学上网的需求。综合以上情况而言，软路由这个新事物引起了我的注意（当然软路由也因为这个功能在电商平台上不得不改名了，好像是叫什么便携式小主机？）</p>
-<p>&emsp;&emsp;我目前使用的软路由是倍控的N5105，23年双十一时冲的，花了大概1000大洋，拿到手后，我便将系统刷到了最主流的Openwrt（一种适用于路由器的Linux操作系统），又因为原版的Openwrt过于简陋，我便选择了国内又一个永爱发电的组织酷友设编译的iStoreOS，这款系统简直是太棒了，对于我这个小白来说十分的友好。之后呢，我也顺利的搭建好了自己的Alist和小雅Docker，不过这时候只支持内网访问。</p>
-<p>&emsp;&emsp;再回到TVBox上，因为小雅的Docker已经包含了一个.json文件，经过我对于本地包代码的研究，我竟然成功的将小雅网站上的内容集成到本地包上了，当时真的好激动！同时我也写了一个自己的.json文件，终于用上了自己的专用线路，同时我还把自己之前手搓的直播源给写进去了，真的是完美！！！</p>
-<p>&emsp;&emsp;本以为这样就结束了，直到我兴奋的将自己修改的本地包给我一很好的哥们用时，发现将本地包传到电视上的过程太过于繁琐了，并且我集成的小雅网站由于无法在外网（此处是指家庭网络外，用手机流量也算）无法访问，效果属实是大打折扣。于是我接着寻找解决方案，继续折腾哈哈哈。</p>
-<p>&emsp;&emsp;后来我找了联通师傅上门服务了，要来了公网ip（可能是我家这个地方用公网的需求不多，师傅竟然直接把权限放开了），但是又出现了另外一个问题，即家庭的公网ip是动态的ip，每当软路由或光猫重启之后宽带的ip都会改变。为了解决这一麻烦，我又去阿里云上购买了一个十年的域名，再利用ddns解析服务将我购买的域名和软路由的ip地址绑定。这时，我利用Docker搭建的小雅网站终于能在公网访问了。现在就剩下最后一个问题了，即本地包的在线维护，如果实现这个功能，其他人只需要输入一条链接就能得到一个拥有本地包同样功能的在线线路了。</p>
-<p>&emsp;&emsp;这个功能在近几天也实现了，我最开始想把本地包搞到Github上进行维护的，但还是那个老生常谈的问题，虽然我家里面的网络访问Github不成问题，但是交给其他人用有时就会出问题了。然后我发现最近好多加速链接也逐渐不能用了，只好继续折腾软路由，建立一个自己的在线仓库。终于在不断地尝试过后，经历了无数次的失败，我总算是搞清楚了各文件直间的逻辑，再更改了一些关键路径之后，我终于成功了。前前后后，耗时近一年，我终于拥有了自己的在线包，随时在电脑上可以修改，并且能够立刻同步，不会像Github上存在延时问题了。</p>
-<p>&emsp;&emsp;暂时先到这吧，这个部分以后还会更新。使用方法部分再慢慢补充。</p>
-<h1 align="center"> 多平台使用方法</h1>
+<p>&emsp;&emsp;最近需要用Zemax分析一个6片式的镜头组的总体透射率，由于原始数据是使用CodeV建模并且Surface Type为Odd Polynomial类型，利用Zemax自带的Converter宏无法将此面型转化（只可识别有限的面型），为避免重复输入多组数据，只好使用ZPL Macros来解决此问题。</p>
+<h1 id="Chapter-1-ZPL-Macros-Group"><a href="#Chapter-1-ZPL-Macros-Group" class="headerlink" title="Chapter 1 ZPL Macros Group"></a>Chapter 1 ZPL Macros Group</h1><p>&emsp;&emsp;ZPL Macros is a section of the Programming Tab</p>
+<img src="/2024/06/ZPL-Tutorial/image-20240619151646592.png" srcset="/img/loading.gif" lazyload class="" title="image-20240619151646592">
 
-<p>&emsp;&emsp;TV端支持TVBox、影视仓、可视TV、<a target="_blank" rel="noopener" href="https://github.com/FongMi/Release">OK影视</a>（FengMi影视），所有资源均来自于各路大神无私分享。在此声明，本仓库建立初衷仅为测试和学习研究，禁止任何公众号、自媒体以任何形式的转载、发布，否则涉及版权问题后果自负。</p>
-<p>&emsp;&emsp;Android端推荐使用<a target="_blank" rel="noopener" href="https://github.com/FongMi/Release">OK影视</a>或<a target="_blank" rel="noopener" href="https://github.com/catvod/CatVodOpen">猫影视</a>，iOS，iPad，Mac，Windows强烈推荐使用猫影视。猫影视下载需要到网站底部点击Release按钮，再选择对应的版本。</p>
-<img src="/2024/06/TVBox/image-20240608171732122.png" srcset="/img/loading.gif" lazyload class="" title="image-20240608171732122">
+<h2 id="1-1-Edit-Run"><a href="#1-1-Edit-Run" class="headerlink" title="1.1 Edit&#x2F;Run"></a>1.1 Edit&#x2F;Run</h2><img src="/2024/06/ZPL-Tutorial/image-20240619152417591.png" srcset="/img/loading.gif" lazyload class="" title="image-20240619152417591">
 
-<ul>
-<li><a target="_blank" rel="noopener" href="https://omii.top/1296.html">猫影视配置教程</a>：<code>注意使用Gitee或Github导入，并设置为私有仓库，仅需配置一次，得到链接后即可跨平台使用。</code></li>
-</ul>
-<h1 align="center"> Live Sources for IPV6</h1>
+<p>**Edit: ** The edit button invokes OpticStudio’s text editor which can be used to modify or rename the macro. This editor colors the macro text using the following ZPL syntax:  </p>
+<table>
+<thead>
+<tr>
+<th align="center">Syntax Category</th>
+<th align="center">Color</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">Comment</td>
+<td align="center">Green</td>
+</tr>
+<tr>
+<td align="center">String</td>
+<td align="center">Violet</td>
+</tr>
+<tr>
+<td align="center">Number</td>
+<td align="center">Light Blue</td>
+</tr>
+<tr>
+<td align="center">ControlKeyword</td>
+<td align="center">Blue</td>
+</tr>
+<tr>
+<td align="center">FunctionKeyword</td>
+<td align="center">Brown</td>
+</tr>
+<tr>
+<td align="center">Identifier</td>
+<td align="center">Black</td>
+</tr>
+</tbody></table>
+<h2 id="1-2-Refresh-List-zpl-macros-group"><a href="#1-2-Refresh-List-zpl-macros-group" class="headerlink" title="1.2 Refresh List (zpl macros group)"></a>1.2 Refresh List (zpl macros group)</h2><img src="/2024/06/ZPL-Tutorial/image-20240619153027016.png" srcset="/img/loading.gif" lazyload class="" title="image-20240619153027016">
 
-<p>Sources are mainly from:</p>
-<ul>
-<li><a target="_blank" rel="noopener" href="https://github.com/YueChan/Live">YueChan</a></li>
-<li><a target="_blank" rel="noopener" href="https://github.com/Ftindy/IPTV-URL">Ftindy</a></li>
-<li><a target="_blank" rel="noopener" href="https://github.com/fanmingming/live">fanminming</a></li>
-</ul>
-<p>EPG Sources are from:</p>
-<ul>
-<li><a target="_blank" rel="noopener" href="https://github.com/fanmingming/live">fanmingming</a></li>
-<li><a target="_blank" rel="noopener" href="https://diyp1.112114.xyz/">112114.xyz</a></li>
-<li><a target="_blank" rel="noopener" href="http://epg.51zmt.top:8000/">epg.51zmt.top:8000</a></li>
-</ul>
-<p>使用方法如下：</p>
-<ul>
-<li>TiviMate，安装到电视上导入m3u文件，体验全功能需要正版账号，可以去闲鱼上淘到，前往<a target="_blank" rel="noopener" href="https://www.tivimate.org/">官网</a>查看使用说明，并下载最新版本使用。</li>
-</ul>
-<img src="/2024/06/TVBox/image-20240605213924271-1718285782769-2.png" srcset="/img/loading.gif" lazyload class="" title="image-20240605213924271">
+<p>&emsp;&emsp;This tool updates the current macro list; which may be required if any macros have been added or deleted since OpticStudio was started or the last time the list was refreshed.</p>
+<h2 id="1-3-New-Macro-and-Macro-Help"><a href="#1-3-New-Macro-and-Macro-Help" class="headerlink" title="1.3 New Macro and Macro Help"></a>1.3 New Macro and Macro Help</h2><img src="/2024/06/ZPL-Tutorial/image-20240619153208794.png" srcset="/img/loading.gif" lazyload class="" title="image-20240619153208794">
 
+<p>&emsp;&emsp;This button opens an OpticStudio text editor to create a new ZPL macro. Macros created with this text editor are automatically saved with the *.ZPL extension and in the Macros user data folder.</p>
+<img src="/2024/06/ZPL-Tutorial/image-20240619153333760.png" srcset="/img/loading.gif" lazyload class="" title="image-20240619153333760">
+
+<p>&emsp;&emsp;This opens the HTML OpticStudio Help Files to the section About the ZPL. If you are viewing this as an HTML window, please click the “+” next to the section header in the Contents pane to expand the subtopics.</p>
+<h1 id="Chapter-2-About-the-ZPL"><a href="#Chapter-2-About-the-ZPL" class="headerlink" title="Chapter 2 About the ZPL"></a>Chapter 2 About the ZPL</h1><h2 id="2-1-Introduction-about-the-zpl"><a href="#2-1-Introduction-about-the-zpl" class="headerlink" title="2.1 Introduction (about the zpl)"></a>2.1 Introduction (about the zpl)</h2><p>&emsp;&emsp;The Zemax Programming Language (ZPL) is a macro language specifically designed for use with OpticStudio. ZPL offers the power of user-entensibility. This means thar if you need a particular calculation or graphical display which is not “built in”, you can write your own ZPL macro to do the job.</p>
+<p>&emsp;&emsp;ZPL is similar to the BASIC programming language, except not all BASIC constructs and keywords are supported, and capabilities and functions unique to ray tracing have been added. ZPL is easy to use, and this section will give you instructions and examples to get you started.</p>
+<p>&emsp;&emsp;ZPL is a powerful programming language. While it is easy to use, ZPL has no built-in debugging or variable shadowing capabilities, so the user is responsible for error-checking, debugging code logic and for good programming practice. For this reason, technical support on macro writing is restricted to ensuring that all ZPL functions and keywords work as documented: we cannot advise on how to perform detailed calculations as part of technical support. If you need a OpticStudio macro, and do not possess the desire or ability to write it yourself, please feel free to contact OpticStudio Technical Support for a quote on developing a custom program to meet your requirements. We have considerable experience in developing these types of programs, and can generally write macros at very competitive rates on short notice.</p>
+<h2 id="2-2-Creating-ZPL-Macros"><a href="#2-2-Creating-ZPL-Macros" class="headerlink" title="2.2 Creating ZPL Macros"></a>2.2 Creating ZPL Macros</h2><p>&emsp;&emsp;A ZPL macro consists of a series of commands which are stored in a text file. The commands are either assignments, keywords, or comments. See “OPTICSTUDIO PROGRAMMING LANGUAGE” for more information.</p>
+<p>&emsp;&emsp;To create a ZPL macro, it is probably easiest to start with an existing macro that performs a task similar to the one you want to achieve. If you are attempting to write your first ZPL macro, you may want to read the example sections at the end of this help file. Some example ZPL macros can also be found in the &lt;data&gt;\Macros folder installed with the OpticStudio program.</p>
+<p>&emsp;&emsp;Use any text editor to create the ZPL file (such as the NOTEPAD editor). The file may have any name but must end in the .ZPL extension. The file must be placed in the ZPL Folder, which by default is &lt;data&gt;\Macros.</p>
+<p>&emsp;&emsp;There is a limit to the allowed complexity of any single line in a ZPL macro. If the “line too long” error occurs, try breaking the line into several smaller lines.</p>
+<h2 id="2-3-An-Overview-of-ZPL"><a href="#2-3-An-Overview-of-ZPL" class="headerlink" title="2.3 An Overview of ZPL"></a>2.3 An Overview of ZPL</h2><p>&emsp;&emsp;A ZPL macro consists of a series of commands which are stored in a text file. The commands are either assignments, keywords, or comments. Assignments may be for either numeric or string (textual) data. Both assignments and keywords may accept expressions as arguments, although the syntax is slightly different as described below.</p>
+<h3 id="2-3-1-Assignments"><a href="#2-3-1-Assignments" class="headerlink" title="2.3.1 Assignments"></a>2.3.1 Assignments</h3><p>&emsp;&emsp;The general syntax for an assignment is</p>
+<figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs markdown">variable = (expression)<br></code></pre></td></tr></table></figure>
+
+<p>&emsp;&emsp;The (expression) may consist of an explicit value, such as 5, or a variable name containing some preassigned value, or a complex mathematical expression involving functions, constants, and variables. In all cases, the expression on the right side of the equal sign is evaluated, and the result is assigned to the variable designated on the left.</p>
+<p>&emsp;&emsp;The simplest form of an assignment is where the expression is a fixed value, such as:</p>
+<figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs markdown">x = 5<br></code></pre></td></tr></table></figure>
+
+<p>&emsp;&emsp;There are several important things to note in this command. First, no declaration of variables is required. This means “x”, which is called a variable, did not need to exist before the value of 5 was assigned to it. If “x” had already been assigned a value, it would now be reassigned. Second, no special symbol is required to terminate a command, such as “;” in C. Because of this, each ZPL command must be on a line by itself</p>
+<figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs markdown">x = SQRT (5)<br>y = SINE (x)<br>z = SQRT (x + 5 * (7-x))<br></code></pre></td></tr></table></figure>
+
+<p>&emsp;&emsp;The functions SQRT (square root) and SINE (sine) are built in to ZPL. There are many of these functions, all of which are defined in “Numeric functions”. Note that ZPL is <code>not case-sensitive</code>; SQRT() and sqrt() are the same function. This documentation will use the convention of capital letters for functions and keywords, and lower case for everything else.</p>
+<p>&emsp;&emsp;There are also string assignments as described in “String variables”.</p>
+<h3 id="2-3-2-Keywords-an-overview-of-zpl"><a href="#2-3-2-Keywords-an-overview-of-zpl" class="headerlink" title="2.3.2 Keywords (an overview of zpl)"></a>2.3.2 Keywords (an overview of zpl)</h3><p>&emsp;&emsp;The general syntax for a keyword is</p>
+<p>&emsp;&emsp;<code>KEYWORD argument1, argument2, argument3...</code></p>
+<p>&emsp;&emsp;Some keywords have no arguments, others have many. Arguments may be either numeric expressions or string constants or string variables. Some keywords accept a mixture of numeric and string arguments.</p>
+<p>&emsp;&emsp;One example of a keyword is PRINT. The PRINT keyword is followed by a list of items, separated by commas, to be printed. For example, the ZPL commands</p>
+<figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs markdown">x = 3 y = 4<br>z = SQRT (x * x + y * y) PRINT &quot;The hypotenuse is &quot;, z<br></code></pre></td></tr></table></figure>
+
+<p>&emsp;&emsp;will print the following:</p>
+<p><code>The hypotenuse is 5.0000</code></p>
+<p>&emsp;&emsp;Note that ZPL enforces operator precedence. ZPL uses the following precedence from highest to lowest: Parentheses, functions (such as SQRT), logical operators (such as &#x3D;&#x3D;), multiplication and division, and then addition and subtraction.</p>
+<p>&emsp;&emsp;There are many keywords, all are described in “Keywords”.</p>
+<h3 id="2-3-3-Comments"><a href="#2-3-3-Comments" class="headerlink" title="2.3.3 Comments"></a>2.3.3 Comments</h3><p>&emsp;&emsp;There are 3 ways to add comments to a ZPL macro: by starting a line with the REM keyword, by starting a line with the “!” symbol, or by placing the “#” symbol anywhere on the line as long as the # symbol is not inside a string. Blank lines are also allowed anywhere in the macro. Here are 3 examples of comments:</p>
+<figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs markdown">REM this is a remark<br>! This is also a remark<br>x = 5 # The # symbol allows comments on the same line as a valid command<br></code></pre></td></tr></table></figure>
+<p>&emsp;&emsp;Comments make macros easier to understand and modify, and have no effect on performance.</p>
+<h3 id="2-3-3-Creating-Graphics"><a href="#2-3-3-Creating-Graphics" class="headerlink" title="2.3.3 Creating Graphics"></a>2.3.3 Creating Graphics</h3><p>&emsp;&emsp;There are a number of low-level functions for generating graphics, including GRAPHICS, GTEXT, GLEN- SNAME, and others. For details see “GRAPHICS”. An easier method of generating typical OpticStudio style line graphs and 2D graphs graphics is available using the PLOT and PLOT2D keywords; see “PLOT” and “PLOT2D”.</p>
+<h2 id="2-4-Numeric-Variables"><a href="#2-4-Numeric-Variables" class="headerlink" title="2.4 Numeric Variables"></a>2.4 Numeric Variables</h2>
                 
               </div>
             
@@ -366,7 +410,7 @@
     
       <span class="category-chain">
         
-  <a href="/categories/Home-Server/" class="category-chain-item">Home Server</a>
+  <a href="/categories/Optics-Softwares/" class="category-chain-item">Optics Softwares</a>
   
   
 
@@ -378,6 +422,13 @@
     </div>
   
   
+    <div class="post-meta">
+      <i class="iconfont icon-tags"></i>
+      
+        <a href="/tags/Zemax/" class="print-no-link">#Zemax</a>
+      
+    </div>
+  
 </div>
 
 
@@ -386,8 +437,8 @@
 
   <div class="license-box my-3">
     <div class="license-title">
-      <div>TVBox神器——让你在电视端获得极致的享受</div>
-      <div>https://blog.alist-ruyi.top/2024/06/TVBox/</div>
+      <div>ZPL-Tutorial</div>
+      <div>https://blog.alist-ruyi.top/2024/06/ZPL-Tutorial/</div>
     </div>
     <div class="license-meta">
       
@@ -399,7 +450,7 @@
       
         <div class="license-meta-item license-meta-date">
           <div>Posted on</div>
-          <div>06/13/2024 21:39</div>
+          <div>06/19/2024 16:28</div>
         </div>
       
       
@@ -431,18 +482,12 @@
                   <article class="post-prev col-6">
                     
                     
-                      <a href="/2024/06/ZPL-Tutorial/" title="ZPL-Tutorial">
-                        <i class="iconfont icon-arrowleft"></i>
-                        <span class="hidden-mobile">ZPL-Tutorial</span>
-                        <span class="visible-mobile">Previous</span>
-                      </a>
-                    
                   </article>
                   <article class="post-next col-6">
                     
                     
-                      <a href="/2024/06/Hexo-theme-fluid/" title="基于Hexo主题Fluid搭建GitHub博客">
-                        <span class="hidden-mobile">基于Hexo主题Fluid搭建GitHub博客</span>
+                      <a href="/2024/06/TVBox/" title="TVBox神器——让你在电视端获得极致的享受">
+                        <span class="hidden-mobile">TVBox神器——让你在电视端获得极致的享受</span>
                         <span class="visible-mobile">Next</span>
                         <i class="iconfont icon-arrowright"></i>
                       </a>
