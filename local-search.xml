@@ -4,6 +4,31 @@
   
   
   <entry>
+    <title>Zotero-Learning</title>
+    <link href="/2024/06/Zotero-Learning/"/>
+    <url>/2024/06/Zotero-Learning/</url>
+    
+    <content type="html"><![CDATA[<h1 id="Chapter-1-Getting-Stuff-Into-Your-Library"><a href="#Chapter-1-Getting-Stuff-Into-Your-Library" class="headerlink" title="Chapter 1 Getting Stuff Into Your Library"></a>Chapter 1 Getting Stuff Into Your Library</h1><h2 id="1-1-Adding-Items-to-Zotero"><a href="#1-1-Adding-Items-to-Zotero" class="headerlink" title="1.1 Adding Items to Zotero"></a>1.1 Adding Items to Zotero</h2><h3 id="emsp-emsp-Via-your-web-browser"><a href="#emsp-emsp-Via-your-web-browser" class="headerlink" title="&emsp;&emsp;Via your web browser"></a>&emsp;&emsp;Via your web browser</h3><p>&emsp;&emsp;<strong>To use Zotero properly, you need to <a href="https://www.zotero.org/download">install the Zotero Connector</a> for Chrome, Firefox, Edge, or Safari, in addition to the Zotero desktop app.</strong></p><img src="/2024/06/Zotero-Learning/image-20240622153042542.png" class="" title="image-20240622153042542"><p>&emsp;&emsp;The Zotero Connector’s save button is the most convenient and reliable way to add items with high-quality bibliographic metadata to your Zotero library. As you browse the web, the Zotero Connector will automatically find bibliographic information on webpages you visit and allow you to add it to Zotero with a single click.</p><p>&emsp;&emsp;For example, if you’re on the main page for a journal article, the save button will change to the icon of a journal article (circled in red):</p><img src="/2024/06/Zotero-Learning/connector_firefox.png" class="" title="connector_firefox"><p>&emsp;&emsp;On a library catalog entry for a book, the save button will show a book icon:</p><img src="/2024/06/Zotero-Learning/connector_book.png" class="" title="connector_book"><p>&emsp;&emsp;Clicking the save button will create an item in Zotero with the information it has identified.</p><p>&emsp;&emsp;On many sites, Zotero will also save any PDF accessible from the page or an open-access PDF that can be found for the saved item.</p><h3 id="emsp-emsp-Generic-Webpages"><a href="#emsp-emsp-Generic-Webpages" class="headerlink" title="&emsp;&emsp;Generic Webpages"></a>&emsp;&emsp;Generic Webpages</h3><p>&emsp;&emsp;Some webpages don’t provide any information that Zotero can recognize. On these pages, the save button will show a gray webpage icon. If you click the save button on these pages, Zotero will import the page as a “Web Page” item with a title, URL, and access date. See <a href="https://www.zotero.org/support/adding_items_to_zotero#saving_webpages">Saving Webpages</a> below.</p><h3 id="emsp-emsp-PDFs"><a href="#emsp-emsp-PDFs" class="headerlink" title="&emsp;&emsp;PDFs"></a>&emsp;&emsp;PDFs</h3><img src="/2024/06/Zotero-Learning/connector_pdf.png" class="" title="connector_pdf"><p>&emsp;&emsp;If you are viewing a PDF file in your browser, the save button will show a PDF icon. Clicking this button will import the PDF file alone into your library and then automatically attempt to <a href="https://www.zotero.org/support/retrieve_pdf_metadata">retrieve information</a> about it. While this will often produce good results, it is usually better to use the save button from the publication’s abstract page or catalog entry, as described above, if there is one.</p><p>&emsp;&emsp;If you save a PDF directly and Zotero isn’t able to retrieve metadata, it will leave the PDF as a standalone attachment. To add metadata, you’ll need to create a parent item, either by saving a regular bibliographic item as described above and dragging the PDF on top of it or by right-clicking on the PDF, choosing Create Parent Item, and entering an identifier such as a DOI or ISBN. If all else fails, you can click Manual Entry after selecting Create Parent Item and manually enter metadata for the item.</p>]]></content>
+    
+    
+    <categories>
+      
+      <category>Learning Tools</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>Zotero</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
     <title>ZPL-Tutorial</title>
     <link href="/2024/06/ZPL-Tutorial/"/>
     <url>/2024/06/ZPL-Tutorial/</url>

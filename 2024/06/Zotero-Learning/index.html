@@ -18,28 +18,27 @@
   <meta name="author" content="Ruyi Chen">
   <meta name="keywords" content="">
   
-    <meta name="description" content="前言  &emsp;&emsp;最近需要用Zemax分析一个6片式的镜头组的总体透射率，由于原始数据是使用CodeV建模并且Surface Type为Odd Polynomial类型，利用Zemax自带的Converter宏无法将此面型转化（只可识别有限的面型），为避免重复输入多组数据，只好使用ZPL Macros来解决此问题。 Chapter 1 ZPL Macros Group&emsp;&amp;e">
+    <meta name="description" content="Chapter 1 Getting Stuff Into Your Library1.1 Adding Items to Zotero&emsp;&emsp;Via your web browser&emsp;&emsp;To use Zotero properly, you need to install the Zotero Connector for Chrome, Firefox, Edg">
 <meta property="og:type" content="article">
-<meta property="og:title" content="ZPL-Tutorial">
-<meta property="og:url" content="https://blog.alist-ruyi.top/2024/06/ZPL-Tutorial/index.html">
+<meta property="og:title" content="Zotero-Learning">
+<meta property="og:url" content="https://blog.alist-ruyi.top/2024/06/Zotero-Learning/index.html">
 <meta property="og:site_name" content="Ruyi&#39;s Blog">
-<meta property="og:description" content="前言  &emsp;&emsp;最近需要用Zemax分析一个6片式的镜头组的总体透射率，由于原始数据是使用CodeV建模并且Surface Type为Odd Polynomial类型，利用Zemax自带的Converter宏无法将此面型转化（只可识别有限的面型），为避免重复输入多组数据，只好使用ZPL Macros来解决此问题。 Chapter 1 ZPL Macros Group&emsp;&amp;e">
+<meta property="og:description" content="Chapter 1 Getting Stuff Into Your Library1.1 Adding Items to Zotero&emsp;&emsp;Via your web browser&emsp;&emsp;To use Zotero properly, you need to install the Zotero Connector for Chrome, Firefox, Edg">
 <meta property="og:locale" content="en_US">
-<meta property="og:image" content="https://blog.alist-ruyi.top/2024/06/ZPL-Tutorial/image-20240619151646592.png">
-<meta property="og:image" content="https://blog.alist-ruyi.top/2024/06/ZPL-Tutorial/image-20240619152417591.png">
-<meta property="og:image" content="https://blog.alist-ruyi.top/2024/06/ZPL-Tutorial/image-20240619153027016.png">
-<meta property="og:image" content="https://blog.alist-ruyi.top/2024/06/ZPL-Tutorial/image-20240619153208794.png">
-<meta property="og:image" content="https://blog.alist-ruyi.top/2024/06/ZPL-Tutorial/image-20240619153333760.png">
-<meta property="article:published_time" content="2024-06-19T08:28:28.000Z">
-<meta property="article:modified_time" content="2024-06-19T08:28:28.346Z">
+<meta property="og:image" content="https://blog.alist-ruyi.top/2024/06/Zotero-Learning/image-20240622153042542.png">
+<meta property="og:image" content="https://blog.alist-ruyi.top/2024/06/Zotero-Learning/connector_firefox.png">
+<meta property="og:image" content="https://blog.alist-ruyi.top/2024/06/Zotero-Learning/connector_book.png">
+<meta property="og:image" content="https://blog.alist-ruyi.top/2024/06/Zotero-Learning/connector_pdf.png">
+<meta property="article:published_time" content="2024-06-22T08:17:22.000Z">
+<meta property="article:modified_time" content="2024-06-22T08:17:22.372Z">
 <meta property="article:author" content="Ruyi Chen">
-<meta property="article:tag" content="Zemax">
+<meta property="article:tag" content="Zotero">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:image" content="https://blog.alist-ruyi.top/2024/06/ZPL-Tutorial/image-20240619151646592.png">
+<meta name="twitter:image" content="https://blog.alist-ruyi.top/2024/06/Zotero-Learning/image-20240622153042542.png">
   
   
   
-  <title>ZPL-Tutorial - Ruyi&#39;s Blog</title>
+  <title>Zotero-Learning - Ruyi&#39;s Blog</title>
 
   <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
 
@@ -209,7 +208,7 @@
       <div class="banner-text text-center fade-in-up">
         <div class="h2">
           
-            <span id="subtitle" data-typed-text="ZPL-Tutorial"></span>
+            <span id="subtitle" data-typed-text="Zotero-Learning"></span>
           
         </div>
 
@@ -220,8 +219,8 @@
     
       <span class="post-meta">
         <i class="iconfont icon-date-fill" aria-hidden="true"></i>
-        <time datetime="2024-06-19 16:28" pubdate>
-          06/19/2024 16:28
+        <time datetime="2024-06-22 16:17" pubdate>
+          06/22/2024 16:17
         </time>
       </span>
     
@@ -232,7 +231,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          393 words
+          82 words
         
       </span>
     
@@ -243,7 +242,7 @@
         
         
         
-          4 mins
+          1 mins
         
       </span>
     
@@ -293,12 +292,12 @@
       <div class="container nopadding-x-md" id="board-ctn">
         <div id="board">
           <article class="post-content mx-auto">
-            <h1 id="seo-header">ZPL-Tutorial</h1>
+            <h1 id="seo-header">Zotero-Learning</h1>
             
               <p id="updated-time" class="note note-info" style="display: none">
                 
                   
-                    Last updated on 2024-06-19T16:28:28+08:00
+                    Last updated on 2024-06-22T16:17:22+08:00
                   
                   
 
@@ -308,91 +307,24 @@
             
               <div class="markdown-body">
                 
-                <h1 align="center">前言</h1>
+                <h1 id="Chapter-1-Getting-Stuff-Into-Your-Library"><a href="#Chapter-1-Getting-Stuff-Into-Your-Library" class="headerlink" title="Chapter 1 Getting Stuff Into Your Library"></a>Chapter 1 Getting Stuff Into Your Library</h1><h2 id="1-1-Adding-Items-to-Zotero"><a href="#1-1-Adding-Items-to-Zotero" class="headerlink" title="1.1 Adding Items to Zotero"></a>1.1 Adding Items to Zotero</h2><h3 id="emsp-emsp-Via-your-web-browser"><a href="#emsp-emsp-Via-your-web-browser" class="headerlink" title="&emsp;&emsp;Via your web browser"></a>&emsp;&emsp;Via your web browser</h3><p>&emsp;&emsp;<strong>To use Zotero properly, you need to <a target="_blank" rel="noopener" href="https://www.zotero.org/download">install the Zotero Connector</a> for Chrome, Firefox, Edge, or Safari, in addition to the Zotero desktop app.</strong></p>
+<img src="/2024/06/Zotero-Learning/image-20240622153042542.png" srcset="/img/loading.gif" lazyload class="" title="image-20240622153042542">
 
-<p>&emsp;&emsp;最近需要用Zemax分析一个6片式的镜头组的总体透射率，由于原始数据是使用CodeV建模并且Surface Type为Odd Polynomial类型，利用Zemax自带的Converter宏无法将此面型转化（只可识别有限的面型），为避免重复输入多组数据，只好使用ZPL Macros来解决此问题。</p>
-<h1 id="Chapter-1-ZPL-Macros-Group"><a href="#Chapter-1-ZPL-Macros-Group" class="headerlink" title="Chapter 1 ZPL Macros Group"></a>Chapter 1 ZPL Macros Group</h1><p>&emsp;&emsp;ZPL Macros is a section of the Programming Tab</p>
-<img src="/2024/06/ZPL-Tutorial/image-20240619151646592.png" srcset="/img/loading.gif" lazyload class="" title="image-20240619151646592">
+<p>&emsp;&emsp;The Zotero Connector’s save button is the most convenient and reliable way to add items with high-quality bibliographic metadata to your Zotero library. As you browse the web, the Zotero Connector will automatically find bibliographic information on webpages you visit and allow you to add it to Zotero with a single click.</p>
+<p>&emsp;&emsp;For example, if you’re on the main page for a journal article, the save button will change to the icon of a journal article (circled in red):</p>
+<img src="/2024/06/Zotero-Learning/connector_firefox.png" srcset="/img/loading.gif" lazyload class="" title="connector_firefox">
 
-<h2 id="1-1-Edit-Run"><a href="#1-1-Edit-Run" class="headerlink" title="1.1 Edit&#x2F;Run"></a>1.1 Edit&#x2F;Run</h2><img src="/2024/06/ZPL-Tutorial/image-20240619152417591.png" srcset="/img/loading.gif" lazyload class="" title="image-20240619152417591">
+<p>&emsp;&emsp;On a library catalog entry for a book, the save button will show a book icon:</p>
+<img src="/2024/06/Zotero-Learning/connector_book.png" srcset="/img/loading.gif" lazyload class="" title="connector_book">
 
-<p>**Edit: ** The edit button invokes OpticStudio’s text editor which can be used to modify or rename the macro. This editor colors the macro text using the following ZPL syntax:  </p>
-<table>
-<thead>
-<tr>
-<th align="center">Syntax Category</th>
-<th align="center">Color</th>
-</tr>
-</thead>
-<tbody><tr>
-<td align="center">Comment</td>
-<td align="center">Green</td>
-</tr>
-<tr>
-<td align="center">String</td>
-<td align="center">Violet</td>
-</tr>
-<tr>
-<td align="center">Number</td>
-<td align="center">Light Blue</td>
-</tr>
-<tr>
-<td align="center">ControlKeyword</td>
-<td align="center">Blue</td>
-</tr>
-<tr>
-<td align="center">FunctionKeyword</td>
-<td align="center">Brown</td>
-</tr>
-<tr>
-<td align="center">Identifier</td>
-<td align="center">Black</td>
-</tr>
-</tbody></table>
-<h2 id="1-2-Refresh-List-zpl-macros-group"><a href="#1-2-Refresh-List-zpl-macros-group" class="headerlink" title="1.2 Refresh List (zpl macros group)"></a>1.2 Refresh List (zpl macros group)</h2><img src="/2024/06/ZPL-Tutorial/image-20240619153027016.png" srcset="/img/loading.gif" lazyload class="" title="image-20240619153027016">
+<p>&emsp;&emsp;Clicking the save button will create an item in Zotero with the information it has identified.</p>
+<p>&emsp;&emsp;On many sites, Zotero will also save any PDF accessible from the page or an open-access PDF that can be found for the saved item.</p>
+<h3 id="emsp-emsp-Generic-Webpages"><a href="#emsp-emsp-Generic-Webpages" class="headerlink" title="&emsp;&emsp;Generic Webpages"></a>&emsp;&emsp;Generic Webpages</h3><p>&emsp;&emsp;Some webpages don’t provide any information that Zotero can recognize. On these pages, the save button will show a gray webpage icon. If you click the save button on these pages, Zotero will import the page as a “Web Page” item with a title, URL, and access date. See <a target="_blank" rel="noopener" href="https://www.zotero.org/support/adding_items_to_zotero#saving_webpages">Saving Webpages</a> below.</p>
+<h3 id="emsp-emsp-PDFs"><a href="#emsp-emsp-PDFs" class="headerlink" title="&emsp;&emsp;PDFs"></a>&emsp;&emsp;PDFs</h3><img src="/2024/06/Zotero-Learning/connector_pdf.png" srcset="/img/loading.gif" lazyload class="" title="connector_pdf">
 
-<p>&emsp;&emsp;This tool updates the current macro list; which may be required if any macros have been added or deleted since OpticStudio was started or the last time the list was refreshed.</p>
-<h2 id="1-3-New-Macro-and-Macro-Help"><a href="#1-3-New-Macro-and-Macro-Help" class="headerlink" title="1.3 New Macro and Macro Help"></a>1.3 New Macro and Macro Help</h2><img src="/2024/06/ZPL-Tutorial/image-20240619153208794.png" srcset="/img/loading.gif" lazyload class="" title="image-20240619153208794">
+<p>&emsp;&emsp;If you are viewing a PDF file in your browser, the save button will show a PDF icon. Clicking this button will import the PDF file alone into your library and then automatically attempt to <a target="_blank" rel="noopener" href="https://www.zotero.org/support/retrieve_pdf_metadata">retrieve information</a> about it. While this will often produce good results, it is usually better to use the save button from the publication’s abstract page or catalog entry, as described above, if there is one.</p>
+<p>&emsp;&emsp;If you save a PDF directly and Zotero isn’t able to retrieve metadata, it will leave the PDF as a standalone attachment. To add metadata, you’ll need to create a parent item, either by saving a regular bibliographic item as described above and dragging the PDF on top of it or by right-clicking on the PDF, choosing Create Parent Item, and entering an identifier such as a DOI or ISBN. If all else fails, you can click Manual Entry after selecting Create Parent Item and manually enter metadata for the item.</p>
 
-<p>&emsp;&emsp;This button opens an OpticStudio text editor to create a new ZPL macro. Macros created with this text editor are automatically saved with the *.ZPL extension and in the Macros user data folder.</p>
-<img src="/2024/06/ZPL-Tutorial/image-20240619153333760.png" srcset="/img/loading.gif" lazyload class="" title="image-20240619153333760">
-
-<p>&emsp;&emsp;This opens the HTML OpticStudio Help Files to the section About the ZPL. If you are viewing this as an HTML window, please click the “+” next to the section header in the Contents pane to expand the subtopics.</p>
-<h1 id="Chapter-2-About-the-ZPL"><a href="#Chapter-2-About-the-ZPL" class="headerlink" title="Chapter 2 About the ZPL"></a>Chapter 2 About the ZPL</h1><h2 id="2-1-Introduction-about-the-zpl"><a href="#2-1-Introduction-about-the-zpl" class="headerlink" title="2.1 Introduction (about the zpl)"></a>2.1 Introduction (about the zpl)</h2><p>&emsp;&emsp;The Zemax Programming Language (ZPL) is a macro language specifically designed for use with OpticStudio. ZPL offers the power of user-entensibility. This means thar if you need a particular calculation or graphical display which is not “built in”, you can write your own ZPL macro to do the job.</p>
-<p>&emsp;&emsp;ZPL is similar to the BASIC programming language, except not all BASIC constructs and keywords are supported, and capabilities and functions unique to ray tracing have been added. ZPL is easy to use, and this section will give you instructions and examples to get you started.</p>
-<p>&emsp;&emsp;ZPL is a powerful programming language. While it is easy to use, ZPL has no built-in debugging or variable shadowing capabilities, so the user is responsible for error-checking, debugging code logic and for good programming practice. For this reason, technical support on macro writing is restricted to ensuring that all ZPL functions and keywords work as documented: we cannot advise on how to perform detailed calculations as part of technical support. If you need a OpticStudio macro, and do not possess the desire or ability to write it yourself, please feel free to contact OpticStudio Technical Support for a quote on developing a custom program to meet your requirements. We have considerable experience in developing these types of programs, and can generally write macros at very competitive rates on short notice.</p>
-<h2 id="2-2-Creating-ZPL-Macros"><a href="#2-2-Creating-ZPL-Macros" class="headerlink" title="2.2 Creating ZPL Macros"></a>2.2 Creating ZPL Macros</h2><p>&emsp;&emsp;A ZPL macro consists of a series of commands which are stored in a text file. The commands are either assignments, keywords, or comments. See “OPTICSTUDIO PROGRAMMING LANGUAGE” for more information.</p>
-<p>&emsp;&emsp;To create a ZPL macro, it is probably easiest to start with an existing macro that performs a task similar to the one you want to achieve. If you are attempting to write your first ZPL macro, you may want to read the example sections at the end of this help file. Some example ZPL macros can also be found in the &lt;data&gt;\Macros folder installed with the OpticStudio program.</p>
-<p>&emsp;&emsp;Use any text editor to create the ZPL file (such as the NOTEPAD editor). The file may have any name but must end in the .ZPL extension. The file must be placed in the ZPL Folder, which by default is &lt;data&gt;\Macros.</p>
-<p>&emsp;&emsp;There is a limit to the allowed complexity of any single line in a ZPL macro. If the “line too long” error occurs, try breaking the line into several smaller lines.</p>
-<h2 id="2-3-An-Overview-of-ZPL"><a href="#2-3-An-Overview-of-ZPL" class="headerlink" title="2.3 An Overview of ZPL"></a>2.3 An Overview of ZPL</h2><p>&emsp;&emsp;A ZPL macro consists of a series of commands which are stored in a text file. The commands are either assignments, keywords, or comments. Assignments may be for either numeric or string (textual) data. Both assignments and keywords may accept expressions as arguments, although the syntax is slightly different as described below.</p>
-<h3 id="2-3-1-Assignments"><a href="#2-3-1-Assignments" class="headerlink" title="2.3.1 Assignments"></a>2.3.1 Assignments</h3><p>&emsp;&emsp;The general syntax for an assignment is</p>
-<figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs markdown">variable = (expression)<br></code></pre></td></tr></table></figure>
-
-<p>&emsp;&emsp;The (expression) may consist of an explicit value, such as 5, or a variable name containing some preassigned value, or a complex mathematical expression involving functions, constants, and variables. In all cases, the expression on the right side of the equal sign is evaluated, and the result is assigned to the variable designated on the left.</p>
-<p>&emsp;&emsp;The simplest form of an assignment is where the expression is a fixed value, such as:</p>
-<figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs markdown">x = 5<br></code></pre></td></tr></table></figure>
-
-<p>&emsp;&emsp;There are several important things to note in this command. First, no declaration of variables is required. This means “x”, which is called a variable, did not need to exist before the value of 5 was assigned to it. If “x” had already been assigned a value, it would now be reassigned. Second, no special symbol is required to terminate a command, such as “;” in C. Because of this, each ZPL command must be on a line by itself</p>
-<figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs markdown">x = SQRT (5)<br>y = SINE (x)<br>z = SQRT (x + 5 * (7-x))<br></code></pre></td></tr></table></figure>
-
-<p>&emsp;&emsp;The functions SQRT (square root) and SINE (sine) are built in to ZPL. There are many of these functions, all of which are defined in “Numeric functions”. Note that ZPL is <code>not case-sensitive</code>; SQRT() and sqrt() are the same function. This documentation will use the convention of capital letters for functions and keywords, and lower case for everything else.</p>
-<p>&emsp;&emsp;There are also string assignments as described in “String variables”.</p>
-<h3 id="2-3-2-Keywords-an-overview-of-zpl"><a href="#2-3-2-Keywords-an-overview-of-zpl" class="headerlink" title="2.3.2 Keywords (an overview of zpl)"></a>2.3.2 Keywords (an overview of zpl)</h3><p>&emsp;&emsp;The general syntax for a keyword is</p>
-<p>&emsp;&emsp;<code>KEYWORD argument1, argument2, argument3...</code></p>
-<p>&emsp;&emsp;Some keywords have no arguments, others have many. Arguments may be either numeric expressions or string constants or string variables. Some keywords accept a mixture of numeric and string arguments.</p>
-<p>&emsp;&emsp;One example of a keyword is PRINT. The PRINT keyword is followed by a list of items, separated by commas, to be printed. For example, the ZPL commands</p>
-<figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs markdown">x = 3 y = 4<br>z = SQRT (x * x + y * y) PRINT &quot;The hypotenuse is &quot;, z<br></code></pre></td></tr></table></figure>
-
-<p>&emsp;&emsp;will print the following:</p>
-<p><code>The hypotenuse is 5.0000</code></p>
-<p>&emsp;&emsp;Note that ZPL enforces operator precedence. ZPL uses the following precedence from highest to lowest: Parentheses, functions (such as SQRT), logical operators (such as &#x3D;&#x3D;), multiplication and division, and then addition and subtraction.</p>
-<p>&emsp;&emsp;There are many keywords, all are described in “Keywords”.</p>
-<h3 id="2-3-3-Comments"><a href="#2-3-3-Comments" class="headerlink" title="2.3.3 Comments"></a>2.3.3 Comments</h3><p>&emsp;&emsp;There are 3 ways to add comments to a ZPL macro: by starting a line with the REM keyword, by starting a line with the “!” symbol, or by placing the “#” symbol anywhere on the line as long as the # symbol is not inside a string. Blank lines are also allowed anywhere in the macro. Here are 3 examples of comments:</p>
-<figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs markdown">REM this is a remark<br>! This is also a remark<br>x = 5 # The # symbol allows comments on the same line as a valid command<br></code></pre></td></tr></table></figure>
-<p>&emsp;&emsp;Comments make macros easier to understand and modify, and have no effect on performance.</p>
-<h3 id="2-3-3-Creating-Graphics"><a href="#2-3-3-Creating-Graphics" class="headerlink" title="2.3.3 Creating Graphics"></a>2.3.3 Creating Graphics</h3><p>&emsp;&emsp;There are a number of low-level functions for generating graphics, including GRAPHICS, GTEXT, GLEN- SNAME, and others. For details see “GRAPHICS”. An easier method of generating typical OpticStudio style line graphs and 2D graphs graphics is available using the PLOT and PLOT2D keywords; see “PLOT” and “PLOT2D”.</p>
-<h2 id="2-4-Numeric-Variables"><a href="#2-4-Numeric-Variables" class="headerlink" title="2.4 Numeric Variables"></a>2.4 Numeric Variables</h2>
                 
               </div>
             
@@ -410,7 +342,7 @@
     
       <span class="category-chain">
         
-  <a href="/categories/Optics-Softwares/" class="category-chain-item">Optics Softwares</a>
+  <a href="/categories/Learning-Tools/" class="category-chain-item">Learning Tools</a>
   
   
 
@@ -425,7 +357,7 @@
     <div class="post-meta">
       <i class="iconfont icon-tags"></i>
       
-        <a href="/tags/Zemax/" class="print-no-link">#Zemax</a>
+        <a href="/tags/Zotero/" class="print-no-link">#Zotero</a>
       
     </div>
   
@@ -437,8 +369,8 @@
 
   <div class="license-box my-3">
     <div class="license-title">
-      <div>ZPL-Tutorial</div>
-      <div>https://blog.alist-ruyi.top/2024/06/ZPL-Tutorial/</div>
+      <div>Zotero-Learning</div>
+      <div>https://blog.alist-ruyi.top/2024/06/Zotero-Learning/</div>
     </div>
     <div class="license-meta">
       
@@ -450,7 +382,7 @@
       
         <div class="license-meta-item license-meta-date">
           <div>Posted on</div>
-          <div>06/19/2024 16:28</div>
+          <div>06/22/2024 16:17</div>
         </div>
       
       
@@ -482,18 +414,12 @@
                   <article class="post-prev col-6">
                     
                     
-                      <a href="/2024/06/Zotero-Learning/" title="Zotero-Learning">
-                        <i class="iconfont icon-arrowleft"></i>
-                        <span class="hidden-mobile">Zotero-Learning</span>
-                        <span class="visible-mobile">Previous</span>
-                      </a>
-                    
                   </article>
                   <article class="post-next col-6">
                     
                     
-                      <a href="/2024/06/TVBox/" title="TVBox神器——让你在电视端获得极致的享受">
-                        <span class="hidden-mobile">TVBox神器——让你在电视端获得极致的享受</span>
+                      <a href="/2024/06/ZPL-Tutorial/" title="ZPL-Tutorial">
+                        <span class="hidden-mobile">ZPL-Tutorial</span>
                         <span class="visible-mobile">Next</span>
                         <i class="iconfont icon-arrowright"></i>
                       </a>
